@@ -61,12 +61,12 @@ body, html{
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 0.65fr 2fr 3fr 1fr 2fr;
+    grid-template-rows: 0.65fr 2fr 4fr 1fr 2fr;
 }
 
 .sidebar{
     grid-area: 1/1/span 5/span 1;
-    height: 100vh;
+    height: 100%;
     color: rgba(253, 253, 253, 0.92);
     background: rgb(143,135,139);
     background: linear-gradient(315deg, rgba(143,135,139,1) 0%, rgba(91,102,117,1) 100%);
@@ -219,4 +219,87 @@ progress {
   progress::-moz-progress-value {
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
+  }
+
+  .big-card2{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1em;
+    border-radius: 12px;
+  }
+  
+  .big-card2>div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sales{
+    display: grid;
+    grid-template: repeat(4, 1fr)/1fr;
+  }
+
+  .sales>div:nth-of-type(1), .sales>div:nth-of-type(2), .sales>div:nth-of-type(3), .sales>div:nth-of-type(4){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    border-bottom: 1px solid rgba(180, 166, 166, 0.4);
+    width: 18rem;
+    height: 1.8em;
+  }
+  .sales>div:nth-of-type(4){
+    border: none;
+  }
+
+  .sales>div>div>i{
+    font-size: 0.7em;
+  }
+
+  .piechart{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border: 1px solid rgb(179, 172, 172);
+    border-radius: 50%;
+    background-image: conic-gradient(
+        rgb(231, 77, 71) 0 30deg, 
+        rgb(64, 231, 48) 30deg 210deg, 
+        rgb(230, 151, 4) 210deg 310deg,
+        rgb(80, 207, 245) 310deg 30deg
+    );
+    width: 120px;
+    height: 120px
+  }
+
+  .big-card2>div:first-child{
+   height: 1.2em;
+  }
+
+  .red{
+    color: rgb(231, 77, 71);
+  }
+
+  .green{
+    color: rgb(64, 231, 48);
+  }
+
+  .blue{
+    color: rgb(80, 207, 245);
+  }
+  .orange{
+    color: rgb(230, 151, 4);
+  }
+  
+  .inner-circle{
+    position: relative;
+    left: 0.9em;
+    top: 0.9em;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
   }
