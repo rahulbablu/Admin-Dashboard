@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/charts.css/dist/charts.min.css">
 </head>
 <body>
         <nav class="navbar">
@@ -121,13 +122,57 @@
         </div></div>
     </div>
     <div class="big-cards">
-        <div class="big-card big-card1">Big Card1</div>
+        <div class="big-card big-card1">
+            <div>
+                <p>Site Traffic</p>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div>
+                <div class="chart">
+                    <div><i class="fa-solid fa-circle orange"></i> Old Users</div>
+                    <div><i class="fa-solid fa-circle redpink"></i> New Users</div>
+                </div>
+                <table id="area-chart" class="charts-css area multiple hide-data show-labels show-data-axes"><caption> Area Example #5 </caption> 
+                    <tbody>
+                      <tr>
+                        <th scope="row">2020</th>
+                       <td style="--start:0.1; --size:0.5;"><span class="data"> 50 </span></td>         
+                       <td style="--start:0.2; --size:0.4;"><span class="data"> 40 </span></td>  
+                      </tr>
+                      <tr>
+                        <th scope="row">2021</th>
+                        <td style="--start:0.5; --size:0.8;"><span class="data"> 80 </span></td>
+                        <td style="--start:0.4; --size:0.1;"><span class="data"> 10 </span></td>       
+                      </tr> 
+                      <tr>
+                        <th scope="row">2022</th>
+                        <td style="--start:0.8; --size:0.4;"><span class="data"> 40 </span></td>
+                        <td style="--start:0.1; --size:0.2;"><span class="data"> 20 </span></td>
+                      </tr>
+                     </tbody>
+                  </table>
+            </div>
+            <div class="traffic">
+                <div class="visitors">
+                    <h3>11.6L</h3>
+                    <h5>Overall Visitors<span>+2.47%</span></h5>
+                </div>
+                <div class="duration">
+                    <h3>14.7min</h3>
+                    <h5>Visitor Duration<span>+6.21%</span></h5>
+                </div>
+                <div class="new">
+                    <h3>14k</h3>
+                    <h5>New Users<span>+5.34%</span></h5>
+                </div>
+            </div>
+        </div>
         <div class="big-card big-card2">
             <div>
                 <p>Weekly Sales</p>
                 <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <div class="piechart"><div class="inner-circle"></div></div>
+            <div class="piechart"></div>
             <div class="sales">
                 <div>
                     <div><i class="fa-solid fa-circle green"></i> Online</div>
@@ -153,15 +198,42 @@
         </div>
     </div>
     <div class="small-cards">
-        <div class="small-card small-card1">Small Card1</div>
-        <div class="small-card small-card2">Small Card2</div>
-        <div class="small-card small-card3">Small Card3</div>
+        <div class="small-card small-card1">
+            <div class="progress">
+                <div class="main facebook">
+                    <div>
+                        <div class="inner-progress"><i class="fa-brands fa-facebook"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5>Facebook Followers<br><span class="info">18.53% <i class="fa-solid fa-arrow-up"></i> Since Last Week</span></h5>
+            </div>
+        </div>
+        <div class="small-card small-card2">
+            <div class="progress">
+                <div class="main twitter">
+                    <div>
+                        <div class="inner-progress"><i class="fa-brands fa-twitter"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5>Twitter Tweets<br><span class="info">29.63% <i class="fa-solid fa-arrow-up"></i> Since Last Week</span></h5>
+            </div>
+        </div>
+        <div class="small-card small-card3">
+            <div class="progress">
+                <div class="main youtube">
+                    <div>
+                        <div class="inner-progress"><i class="fa-brands fa-youtube"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h5>Youtube Subscribers<br><span class="info">63.71% <i class="fa-solid fa-arrow-up"></i> Since Last Week</span></h5>
+            </div>
+        </div>
     </div>
-    <div class="medium-cards">
-        <div class="medium-card medium-card1">Medium Card1</div>
-        <div class="medium-card medium-card2">Medium Card2</div>
-        <div class="medium-card medium-card3">Medium Card3</div>
-    </div>
-    
 </body>
 </html>

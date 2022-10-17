@@ -61,7 +61,7 @@ body, html{
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 0.65fr 2fr 4fr 1fr 2fr;
+    grid-template-rows: 0.55fr 0.80fr 3fr 1fr;
 }
 
 .sidebar{
@@ -139,7 +139,7 @@ body{
     grid-template: 1fr/repeat(4, 1fr);
     grid-area: 2/2/span 1/ span 1;
     place-items: center;
-    margin: 1.8em 1em;
+    margin: 0.3em 0.4em;
 }
 
 .big-cards{
@@ -147,6 +147,7 @@ body{
     grid-template: 1fr/ 2fr 1fr;
     grid-area: 3/2/span 1/span 1;
     place-items: center;
+    align-content: center;
 }
 
 .small-cards{
@@ -220,34 +221,28 @@ progress {
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
   }
-
-  .big-card2{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 1em;
-    border-radius: 12px;
-  }
   
   .big-card2>div:nth-of-type(1){
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2em;
   }
 
   .sales{
     display: grid;
     grid-template: repeat(4, 1fr)/1fr;
+    padding-top: 1em;
+    align-self: center;
   }
 
   .sales>div:nth-of-type(1), .sales>div:nth-of-type(2), .sales>div:nth-of-type(3), .sales>div:nth-of-type(4){
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 3em;
     border-bottom: 1px solid rgba(180, 166, 166, 0.4);
     width: 18rem;
-    height: 1.8em;
+    height: 2em;
   }
   .sales>div:nth-of-type(4){
     border: none;
@@ -261,8 +256,6 @@ progress {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0.5em 0;
-    padding: 0.5em;
     border: 1px solid rgb(179, 172, 172);
     border-radius: 50%;
     background-image: conic-gradient(
@@ -271,12 +264,8 @@ progress {
         rgb(230, 151, 4) 210deg 310deg,
         rgb(80, 207, 245) 310deg 30deg
     );
-    width: 120px;
-    height: 120px
-  }
-
-  .big-card2>div:first-child{
-   height: 1.2em;
+    width: 140px;
+    height: 140px
   }
 
   .red{
@@ -293,13 +282,182 @@ progress {
   .orange{
     color: rgb(230, 151, 4);
   }
-  
-  .inner-circle{
-    position: relative;
-    left: 0.9em;
-    top: 0.9em;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+
+  .redpink{
+    color: rgb(190, 94, 94);
+  }
+
+  .big-card1{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.3em;
     background-color: white;
+    border-radius: 12px;
+    margin: 0 3em;
+    margin-left: 5em;
+    height: 89%;
+    width: 90%;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .big-card2{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: white;
+    border-radius: 12px;
+    height: 89%;
+    width: 90%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .big-card1>div:first-child{
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    height: 1em;
+    padding: 1em;
+    justify-content: space-between;
+  }
+
+  .traffic{
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .traffic>div>h3, .traffic>div>h5{
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  .traffic>div>h5{
+    text-align: center;
+    margin: 0;
+    padding-top: 0.6em;
+    font-size: 0.88em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .traffic>div{
+    border-top: 1px solid rgba(143,135,139, 0.4);
+    flex-basis: 100%;
+  }
+
+  .visitors, .duration, .new{
+    width: 200px;
+    padding: 1em 0;
+  }
+
+  .duration, .visitors{
+    border-right: 1px solid rgba(143,135,139, 0.4);
+  }
+
+  .traffic>div>h5>span{
+    padding-left: 3.6em;
+  }
+
+  #area-chart{
+    width: 520px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+  }
+  .chart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
+  }
+
+  .small-cards{
+    margin: 0 2em;
+    margin-left: 3em;
+    gap: 2em;
+    border-radius: 12px;
+  }
+  .small-card1, .small-card2, .small-card3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .small-card>div{
+    width: 100%;
+    align-self: center;
+  }
+
+  .progress>div{
+    position: relative;
+      border: 1px solid rgb(179, 172, 172);
+      border-radius: 50%;
+      padding: 0;
+      margin: 0;
+      height: 80px;
+      width: 80px;
+      margin: 0.8em;
+      margin-left: 2em;
+  }
+
+  .progress>div>div>.inner-progress{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12.5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .youtube{
+    background: conic-gradient(rgb(228, 31, 31) 68%, 0, rgba(196, 185, 185, 0.5) 32%);
+  }
+
+  .facebook{
+    background: conic-gradient(rgb(38, 73, 230) 45%, 0, rgba(196, 185, 185, 0.5) 55%);
+  }
+
+  .twitter{
+    background: conic-gradient(rgb(38, 192, 253) 59%, 0, rgba(196, 185, 185, 0.5) 41%);
+  }
+
+  .fa-youtube{
+    color: rgb(228, 31, 31);
+    font-size: 1.5em;
+  }
+
+  .fa-twitter{
+    color: rgb(38, 192, 253);
+    font-size: 1.5em;
+  }
+
+  .fa-facebook{
+    color: rgb(38, 73, 220);
+    font-size: 1.5em;
+  }
+
+  .small-card>div>h5{
+    font-size: 0.95em;
+    text-align: start;
+  }
+
+  .small-card>div>h5>.info{
+    font-weight: 300;
+    font-size: 0.8em;
+    opacity: 0.9;
+    line-height: 2.8em;
   }
