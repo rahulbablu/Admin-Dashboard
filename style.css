@@ -4,6 +4,7 @@ body, html{
     box-sizing: border-box;
     background-color: aliceblue;
     font-family: 'Outfit', sans-serif;
+    width: 100vw;
 }
 
 .navbar{
